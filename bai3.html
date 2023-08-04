@@ -6,13 +6,16 @@
     <title>Reverse a number</title>
     <script>
 
-        let n = 1234;
-        document.write("giá trị chưa hoán đổi :" + n);
-        function daonguoc(n) {
-            n = n + "";
-            return n.split("").reverse().join("");
+        let n = 1234
+        console.log(+n.toString().split("").reverse().join(""));
+        let str = ''
+        while (n > 0) {
+            let soCuoi = n % 10;
+            str += soCuoi;
+            n = Math.floor(n / 10);
         }
-        alert(daonguoc(n));
+        console.log(+str);
+
     </script>
 </head>
 
