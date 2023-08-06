@@ -82,3 +82,23 @@ const sumRemainNumbers = copyArr.reduce((pre, cur) => {
 console.log("Số chia hết cho 2 tư 0 - 50 :" + ct5);
 
 // Chưa hiểu bài 4 
+
+const sumArr= [
+  { name: 'name1', count: 13 },
+  { name: 'name3', count: 23 },
+  { name: 'name1', count: 25 },
+  { name: 'name2', count: 27 },
+  { name: 'name3', count: 30 },
+  { name: 'name2', count: 20 }
+]
+
+const newArr=[];
+for (let element of sumArr){
+  let indexExists= newArr.findIndex((value)=> value.name===element.name)
+  if (indexExists!==-1){
+    newArr[indexExists].count+= element.count
+  }else {
+    newArr.push(element)
+  }
+}
+console.log(newArr)
